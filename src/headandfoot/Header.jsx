@@ -18,7 +18,7 @@ const Header = () => {
     <nav className={`nav ${isActive ? 'active' : ''}`}>
       <div className="container">
         <div className="logo">
-          <Link to="#">
+          <Link to="/">
             <img src={logo} alt="Logo" className="logo-img" />
           </Link>
         </div>
@@ -31,16 +31,16 @@ const Header = () => {
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="#">Features</Link>
+              <Link to="/fetures">Features</Link>
             </li>
             <li>
-              <Link to="#">Tech Stack</Link>
+              <Link to="/techStack">Tech Stack</Link>
             </li>
             <li>
-              <Link to="">Demo</Link>
+              <Link to="/demo">Demo</Link>
             </li>
             <li>
-              <Link to="#">Contact</Link>
+              <Link to="/contact">Contact</Link>
             </li>
             <li className="signin-btn">
               <Link to="/signin">Sign In</Link> {/* Link to your sign-in page */}
