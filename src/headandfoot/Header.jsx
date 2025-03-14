@@ -33,7 +33,7 @@ const Header = () => {
           >
             <ul className="navlinks">
               <li>
-                <Link to="/">Eonverse</Link>
+                <Link to="/eonverse-hackies/">Eonverse</Link>
               </li>
               <li>
                 <Link to="/about">About</Link>
@@ -85,25 +85,25 @@ const Header = () => {
         <div className="offcanvas-body off-list">
           <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li>
-                <Link to="/eonverse-hackies/">Eonverse</Link>
+                <Link to="/eonverse-hackies/"  onClick={handleCloseOffcanvas}>Eonverse</Link>
               </li>
               <li>
-                <Link to="/about">About</Link>
+                <Link to="/about"  onClick={handleCloseOffcanvas}>About</Link>
               </li>
               <li>
-                <Link to="/fetures">Features</Link>
+                <Link to="/fetures" onClick={handleCloseOffcanvas}>Features</Link>
               </li>
               <li>
-                <Link to="/techStack">Tech Stack</Link>
+                <Link to="/techStack" onClick={handleCloseOffcanvas}>Tech Stack</Link>
               </li>
               <li>
-                <Link to="/demo">Demo</Link>
+                <Link to="/demo" onClick={handleCloseOffcanvas}>Demo</Link>
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
+                <Link to="/contact" onClick={handleCloseOffcanvas}>Contact</Link>
               </li>
               <li className="signin-btn">
-                <Link to="/signin">Sign In</Link>
+                <Link to="/signin" onClick={handleCloseOffcanvas}>Sign In</Link>
               </li>
           </ul>
         </div>

@@ -1,0 +1,107 @@
+
+.techstack-main {
+  display: grid;
+  justify-content: center;
+  font-family: montserrat, sans-serif;
+}
+
+.techstack-heading h2 {
+  font-size: 40px;
+  font-weight: bold;
+  display: grid;
+  justify-content: center;
+}
+
+.techstack-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+  margin: 10px 0px -10px 0px;
+}
+
+.techstack-description {
+  display: block;
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Style for the grid container */
+.techstack-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Show 3 cards per row */
+  gap: 50px;
+  max-width: 100vw;
+  padding: 20px;
+  margin: 0 auto; /* Center the grid */
+}
+
+/* Responsiveness for medium screens (tablets, small laptops) */
+@media (max-width: 1024px) {
+  .techstack-grid {
+    grid-template-columns: repeat(2, 1fr); /* Show 2 cards per row on smaller screens */
+    gap: 30px;
+  }
+}
+
+/* Responsiveness for small screens (smartphones) */
+@media (max-width: 768px) {
+  .techstack-grid {
+    grid-template-columns: 1fr; /* Stack all cards in one column on very small screens */
+    gap: 20px;
+  }
+}
+
+
+.techstack-box {
+  background: linear-gradient(to bottom, #8bb9e876, #4aa6e373);
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.techstack-readmore {
+  padding: 20px 30px;
+  border-radius: 4px;
+  background-color: #333;
+  color: white;
+}
+
+.techstack-icon {
+  width: 80px;
+  height: 80px;
+}
+
+/* Styling for the icon container */
+.techstack-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, opacity 0.5s ease;
+}
+
+/* Hover animation to scale and rotate the icon */
+.techstack-icon:hover {
+  transform: rotate(360deg) scale(1.1); /* Rotate and scale on hover */
+  opacity: 0.8; /* Slight opacity change for effect */
+}
+
+/* Bounce animation effect when the page loads */
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.techstack-icon {
+  animation: bounce 2s infinite; /* Apply bounce animation */
+}
+
+.techstack-icon:hover {
+  animation: none; /* Stop animation on hover */
+}

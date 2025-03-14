@@ -7,6 +7,7 @@ import Fetures from './component/Fetures/Features.jsx'
 import TechStack from './component/TechStack.jsx'
 import Demo from './component/Demo.jsx'
 import Contact from './component/Contact.jsx'
+import Signin from './component/loginitems/Signin.jsx'
 import React from 'react'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/techStack" element={<TechStack />} />
           <Route path="/demo" element={<Demo />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/signin" element={<Signin />} />
           
         </Routes>
       </div>
