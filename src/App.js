@@ -3,11 +3,10 @@ import Header from './headandfoot/Header.jsx'
 import Hero from './component/Hero.jsx'
 import Main from './component/MainPage.jsx'
 import About from './component/About.jsx'
-import Fetures from './component/Features.jsx'
+import Fetures from './component/Fetures/Features.jsx'
 import TechStack from './component/TechStack.jsx'
 import Demo from './component/Demo.jsx'
 import Contact from './component/Contact.jsx'
-import './App.css';
 import React from 'react'
 
 function App() {
