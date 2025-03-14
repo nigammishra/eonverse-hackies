@@ -1,8 +1,10 @@
 {
   "files": {
-    "main.css": "/eonverse-hackies/static/css/main.ba175197.css",
-    "main.js": "/eonverse-hackies/static/js/main.6814d7a5.js",
+    "main.css": "/eonverse-hackies/static/css/main.c5cf8dcb.css",
+    "main.js": "/eonverse-hackies/static/js/main.b49b21d1.js",
     "static/js/453.2ca9532b.chunk.js": "/eonverse-hackies/static/js/453.2ca9532b.chunk.js",
+    "static/media/signinbackvideo.mov": "/eonverse-hackies/static/media/signinbackvideo.4ee99388f695dcf86885.mov",
+    "static/media/demobackvideo.mov": "/eonverse-hackies/static/media/demobackvideo.0d864392671f17528cab.mov",
     "static/media/capimg3.jpg": "/eonverse-hackies/static/media/capimg3.79e69e416994fef7cfe7.jpg",
     "static/media/feimg2.jpg": "/eonverse-hackies/static/media/feimg2.44abb80a7bf214158490.jpg",
     "static/media/feiimg3.jpg": "/eonverse-hackies/static/media/feiimg3.23d0fec0d4be1fc33a4d.jpg",
@@ -15,12 +17,12 @@
     "static/media/hackies-logo.png": "/eonverse-hackies/static/media/hackies-logo.0e486e83fc25e46864f4.png",
     "static/media/capimg1.avif": "/eonverse-hackies/static/media/capimg1.81d5078405556fe67aa3.avif",
     "index.html": "/eonverse-hackies/index.html",
-    "main.ba175197.css.map": "/eonverse-hackies/static/css/main.ba175197.css.map",
-    "main.6814d7a5.js.map": "/eonverse-hackies/static/js/main.6814d7a5.js.map",
+    "main.c5cf8dcb.css.map": "/eonverse-hackies/static/css/main.c5cf8dcb.css.map",
+    "main.b49b21d1.js.map": "/eonverse-hackies/static/js/main.b49b21d1.js.map",
     "453.2ca9532b.chunk.js.map": "/eonverse-hackies/static/js/453.2ca9532b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba175197.css",
-    "static/js/main.6814d7a5.js"
+    "static/css/main.c5cf8dcb.css",
+    "static/js/main.b49b21d1.js"
   ]
 }
