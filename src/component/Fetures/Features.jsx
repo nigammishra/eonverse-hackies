@@ -1,5 +1,11 @@
 import React from 'react'
 import './features.css'
+import image1 from '../../images/featuresimg1.jpg';
+import image2 from '../../images/feimg2.jpg';
+import image3 from '../../images/feiimg3.jpg';
+import image4 from '../../images/feimg4.jpg';
+
+
 
 const Features = () => {
   return (
@@ -8,22 +14,22 @@ const Features = () => {
       <div className="row justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
         <div className="col-md-3 d-flex justify-content-center">
           <div className="unique-lighthouse">
-            <img src="https://picsum.photos/id/58/300/300" alt="a lighthouse"/>
+            <img src={image1} alt="a lighthouse"/>
           </div>
         </div>
         <div className="col-md-3 d-flex justify-content-center">
           <div className="unique-old-city">
-            <img src="https://picsum.photos/id/61/300/300" alt="an old city"/>
+            <img src={image2} alt="an old city"/>
           </div>
         </div>
         <div className="col-md-3 d-flex justify-content-center">
           <div className="unique-lighthouse">
-            <img src="https://picsum.photos/id/58/300/300" alt="a lighthouse"/>
+            <img src={image3} alt="a lighthouse"/>
           </div>
         </div>
         <div className="col-md-3 d-flex justify-content-center">
           <div className="unique-old-city">
-            <img src="https://picsum.photos/id/61/300/300" alt="an old city"/>
+            <img src={image4} alt="an old city"/>
           </div>
         </div>
       </div>

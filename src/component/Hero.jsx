@@ -54,8 +54,8 @@ const Hero = () => {
   }, []);
 
   return (
-    <main>
-      <div className="content">
+    <main >
+      <div className="content"style={{marginTop:'130px'}}>
         <h1>FrontEnd Ace...</h1>
         <p>
           "Created a hero section with a Bootstrap `col-6` layout, featuring a 3D carousel on one side, providing a dynamic and visually immersive experience that draws users' attention."
