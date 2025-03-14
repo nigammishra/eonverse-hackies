@@ -1,22 +1,26 @@
 {
   "files": {
-    "main.css": "/eonverse-hackies/static/css/main.1b849177.css",
-    "main.js": "/eonverse-hackies/static/js/main.c5e5788e.js",
+    "main.css": "/eonverse-hackies/static/css/main.ba175197.css",
+    "main.js": "/eonverse-hackies/static/js/main.38c04414.js",
     "static/js/453.2ca9532b.chunk.js": "/eonverse-hackies/static/js/453.2ca9532b.chunk.js",
     "static/media/capimg3.jpg": "/eonverse-hackies/static/media/capimg3.79e69e416994fef7cfe7.jpg",
+    "static/media/feimg2.jpg": "/eonverse-hackies/static/media/feimg2.44abb80a7bf214158490.jpg",
+    "static/media/feiimg3.jpg": "/eonverse-hackies/static/media/feiimg3.23d0fec0d4be1fc33a4d.jpg",
+    "static/media/feimg4.jpg": "/eonverse-hackies/static/media/feimg4.796db64a7a1c94b56cb4.jpg",
     "static/media/capimg5.jpg": "/eonverse-hackies/static/media/capimg5.905f62482b3647557f74.jpg",
     "static/media/capimg6.jpg": "/eonverse-hackies/static/media/capimg6.fcfea14ca383740ff932.jpg",
     "static/media/capimg4.jpg": "/eonverse-hackies/static/media/capimg4.d958077571b4c5c7278d.jpg",
     "static/media/capimg2.avif": "/eonverse-hackies/static/media/capimg2.88c6b5b01379c53f83da.avif",
+    "static/media/featuresimg1.jpg": "/eonverse-hackies/static/media/featuresimg1.6eaab099f95305564fe3.jpg",
     "static/media/hackies-logo.png": "/eonverse-hackies/static/media/hackies-logo.0e486e83fc25e46864f4.png",
     "static/media/capimg1.avif": "/eonverse-hackies/static/media/capimg1.81d5078405556fe67aa3.avif",
     "index.html": "/eonverse-hackies/index.html",
-    "main.1b849177.css.map": "/eonverse-hackies/static/css/main.1b849177.css.map",
-    "main.c5e5788e.js.map": "/eonverse-hackies/static/js/main.c5e5788e.js.map",
+    "main.ba175197.css.map": "/eonverse-hackies/static/css/main.ba175197.css.map",
+    "main.38c04414.js.map": "/eonverse-hackies/static/js/main.38c04414.js.map",
     "453.2ca9532b.chunk.js.map": "/eonverse-hackies/static/js/453.2ca9532b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b849177.css",
-    "static/js/main.c5e5788e.js"
+    "static/css/main.ba175197.css",
+    "static/js/main.38c04414.js"
   ]
 }
