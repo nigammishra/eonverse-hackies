@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/eonverse-hackies/static/css/main.ba175197.css",
-    "main.js": "/eonverse-hackies/static/js/main.38c04414.js",
+    "main.js": "/eonverse-hackies/static/js/main.6814d7a5.js",
     "static/js/453.2ca9532b.chunk.js": "/eonverse-hackies/static/js/453.2ca9532b.chunk.js",
     "static/media/capimg3.jpg": "/eonverse-hackies/static/media/capimg3.79e69e416994fef7cfe7.jpg",
     "static/media/feimg2.jpg": "/eonverse-hackies/static/media/feimg2.44abb80a7bf214158490.jpg",
@@ -16,11 +16,11 @@
     "static/media/capimg1.avif": "/eonverse-hackies/static/media/capimg1.81d5078405556fe67aa3.avif",
     "index.html": "/eonverse-hackies/index.html",
     "main.ba175197.css.map": "/eonverse-hackies/static/css/main.ba175197.css.map",
-    "main.38c04414.js.map": "/eonverse-hackies/static/js/main.38c04414.js.map",
+    "main.6814d7a5.js.map": "/eonverse-hackies/static/js/main.6814d7a5.js.map",
     "453.2ca9532b.chunk.js.map": "/eonverse-hackies/static/js/453.2ca9532b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ba175197.css",
-    "static/js/main.38c04414.js"
+    "static/js/main.6814d7a5.js"
   ]
 }
