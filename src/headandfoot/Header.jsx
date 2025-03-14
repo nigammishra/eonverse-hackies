@@ -85,7 +85,7 @@ const Header = () => {
         <div className="offcanvas-body off-list">
           <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li>
-                <Link to="/">Eonverse</Link>
+                <Link to="/eonverse-hackies/">Eonverse</Link>
               </li>
               <li>
                 <Link to="/about">About</Link>

@@ -15,7 +15,7 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route path="/eonverse-hackies/" element={<Main />} />
           <Route path="/hero" element={<Hero />} />
           <Route path="/about" element={<About />} />
           <Route path="/fetures" element={<Fetures />} />
