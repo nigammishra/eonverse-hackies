@@ -20,9 +20,9 @@ main {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   place-items: center;
-  min-height: 100vh;
+  min-height: 90vh;
   position: relative;
-  top: 30px;
+  top: 50px;
 }
 
 /* Content */

@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 
 const Contact = () => {
-  return (
-    <div>Contact</div>
-  )
-}
+  const [loading, setLoading] = useState(true);
 
-export default Contact
+  useEffect(() => {
+    // Simulate loading time (e.g., 3 seconds)
+    setTimeout(() => setLoading(false), 3000);
+  }, []);
+
+  return (
+    <div>
+      {loading ? (
+        <div className="loader-container">
+          <div className="sci-fi-loader"></div>
+        </div>
+      ) : (
+        <div>Contact</div>
+      )}
+    </div>
+  );
+};
+
+export default Contact;

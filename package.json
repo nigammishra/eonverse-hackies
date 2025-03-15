@@ -13,6 +13,7 @@
     "framer-motion": "^12.5.0",
     "gh-pages": "^6.3.0",
     "gsap": "^3.12.7",
+    "particles.js": "^2.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-helmet": "^6.1.0",
@@ -20,6 +21,7 @@
     "react-loader-spinner": "^6.1.6",
     "react-router-dom": "^7.3.0",
     "react-scripts": "5.0.1",
+    "sweetalert": "^2.1.2",
     "sweetalert2": "^11.17.2",
     "web-vitals": "^2.1.4"
   },

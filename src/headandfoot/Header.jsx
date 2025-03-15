@@ -72,9 +72,11 @@ const Header = () => {
         style={{ visibility: showOffcanvas ? "visible" : "hidden" }}
       >
         <div className="offcanvas-header">
-          <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
-            Offcanvas
-          </h5>
+        <div className="logo">
+            <Link to="/">
+              <img src={logo} alt="Logo" className="logo-img" />
+            </Link>
+          </div>
           <button
             type="button"
             className="btn-close"

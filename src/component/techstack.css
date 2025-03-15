@@ -57,6 +57,9 @@ a {
   }
 }
 
+.techstack-section{
+  background: linear-gradient(to bottom, #8bb9e876, #4aa6e373);
+}
 
 .techstack-box {
   background: linear-gradient(to bottom, #8bb9e876, #4aa6e373);
@@ -69,6 +72,8 @@ a {
   border-radius: 4px;
   background-color: #333;
   color: white;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .techstack-icon {

@@ -93,8 +93,38 @@ body {
   font-size: 2.4rem;
 }
 
+.nav div.main_list ul li a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav div.main_list ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Distance from text */
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  background-color: #00a1e6b2; /* Underline color */
+  transition: width 0.3s ease-in-out;
+}
+
 .nav div.main_list ul li a:hover {
-  color: #00e676;
+  color: #00a1e6b2;
+}
+
+.nav div.main_list ul li a:hover::after {
+  width: 100%; /* Full underline on hover */
+}
+/* Active State */
+.nav div.main_list ul li a.active {
+  color: #00a1e6b2;
+}
+
+.nav div.main_list ul li a.active::after {
+  width: 100%; /* Full underline for active link */
 }
 
 /* Home section */
@@ -380,47 +410,94 @@ body {
 }
 /* For desktop view */
 .main_list {
-    display: flex;
+  display: flex;
+  gap: 20px;
+}
+
+.navTrigger {
+  display: none; /* Hide menu icon in desktop view */
+}
+
+/* For tablet and mobile view */
+@media screen and (max-width: 1201px) {
+  .main_list {
+    display: none; /* Hide navbar links by default */
+    flex-direction: column;
+    text-align: center;
     gap: 20px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #111;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+    padding: 20px 0;
   }
-  
+
+  .main_list.show_list {
+    display: flex; /* Show the links when the state is active */
+  }
+
   .navTrigger {
-    display: none; /* Hide menu icon in desktop view */
+    display: block; /* Show the menu icon */
+    cursor: pointer;
   }
-  
-  /* For mobile view */
-  @media screen and (max-width: 768px) {
-    .main_list {
-      display: none; /* Hide navbar links by default */
-      flex-direction: column;
-      text-align: center;
-      gap: 20px;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      background-color: #111;
-      width: 100%;
-      height: auto;
-      z-index: 999;
-      padding: 20px 0;
-    }
-  
-    .main_list.show_list {
-      display: flex; /* Show the links when the state is active */
-    }
-  
-    .navTrigger {
-      display: block; /* Show the menu icon */
-      cursor: pointer;
-    }
-  
-    .navTrigger i {
-      background-color: white;
-      display: block;
-      width: 25px;
-      height: 3px;
-      margin: 5px auto;
-      transition: all 0.3s ease-in-out;
-    }
+
+  .navTrigger i {
+    background-color: white;
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
   }
-  
+}
+
+
+
+/* Offcanvas Styles */
+.offcanvas {
+  background-color: white; /* Set the background color of the offcanvas to white */
+  color: #333; /* Set text color to dark for contrast */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for visibility */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateX(100%); /* Initially hidden off the right */
+  z-index: 1050; /* Ensure it's on top */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better visibility */
+}
+
+.offcanvas.show {
+  transform: translateX(0); /* Slide in from the right when active */
+}
+
+.offcanvas-header {
+  padding: 10px 20px;
+  background-color: #000; /* Keep header background white */
+  border-bottom: 1px solid #ddd; /* Optional: Add a border for separation */
+}
+
+.offcanvas-body {
+  padding: 20px;
+  overflow-y: auto; /* Ensure content is scrollable if too long */
+}
+
+.navbar-nav li {
+  padding: 10px 0;
+  list-style-type: none;
+}
+
+.navbar-nav li a {
+  color: #333; /* Dark text color for links */
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbar-nav li a:hover {
+  color: #007bff; /* Hover color for links */
+}
+
