@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/eonverse-hackies/static/css/main.46889fd5.css",
-    "main.js": "/eonverse-hackies/static/js/main.9f0c3724.js",
-    "static/css/681.d2ea501a.chunk.css": "/eonverse-hackies/static/css/681.d2ea501a.chunk.css",
+    "main.js": "/eonverse-hackies/static/js/main.1d2b323e.js",
+    "static/css/681.58457c85.chunk.css": "/eonverse-hackies/static/css/681.58457c85.chunk.css",
     "static/js/681.cb348a5a.chunk.js": "/eonverse-hackies/static/js/681.cb348a5a.chunk.js",
-    "static/css/840.d2ea501a.chunk.css": "/eonverse-hackies/static/css/840.d2ea501a.chunk.css",
+    "static/css/840.58457c85.chunk.css": "/eonverse-hackies/static/css/840.58457c85.chunk.css",
     "static/js/840.ced2a00c.chunk.js": "/eonverse-hackies/static/js/840.ced2a00c.chunk.js",
     "static/js/143.71469b39.chunk.js": "/eonverse-hackies/static/js/143.71469b39.chunk.js",
     "static/css/272.7bb8dcc6.chunk.css": "/eonverse-hackies/static/css/272.7bb8dcc6.chunk.css",
@@ -14,11 +14,11 @@
     "static/css/81.53d20a89.chunk.css": "/eonverse-hackies/static/css/81.53d20a89.chunk.css",
     "static/js/81.d9bf9370.chunk.js": "/eonverse-hackies/static/js/81.d9bf9370.chunk.js",
     "static/js/428.5a18e252.chunk.js": "/eonverse-hackies/static/js/428.5a18e252.chunk.js",
-    "static/css/105.559df91e.chunk.css": "/eonverse-hackies/static/css/105.559df91e.chunk.css",
-    "static/js/105.77418277.chunk.js": "/eonverse-hackies/static/js/105.77418277.chunk.js",
+    "static/css/969.75f97470.chunk.css": "/eonverse-hackies/static/css/969.75f97470.chunk.css",
+    "static/js/969.4f968aeb.chunk.js": "/eonverse-hackies/static/js/969.4f968aeb.chunk.js",
     "static/js/453.2ca9532b.chunk.js": "/eonverse-hackies/static/js/453.2ca9532b.chunk.js",
+    "static/js/563.b4487e35.chunk.js": "/eonverse-hackies/static/js/563.b4487e35.chunk.js",
     "static/js/411.4bafcbc3.chunk.js": "/eonverse-hackies/static/js/411.4bafcbc3.chunk.js",
-    "static/js/23.193477c8.chunk.js": "/eonverse-hackies/static/js/23.193477c8.chunk.js",
     "static/js/64.27babbfc.chunk.js": "/eonverse-hackies/static/js/64.27babbfc.chunk.js",
     "static/media/signinbackvideo.mov": "/eonverse-hackies/static/media/signinbackvideo.4ee99388f695dcf86885.mov",
     "static/media/demobackvideo.mov": "/eonverse-hackies/static/media/demobackvideo.0d864392671f17528cab.mov",
@@ -35,10 +35,10 @@
     "static/media/capimg1.avif": "/eonverse-hackies/static/media/capimg1.81d5078405556fe67aa3.avif",
     "index.html": "/eonverse-hackies/index.html",
     "main.46889fd5.css.map": "/eonverse-hackies/static/css/main.46889fd5.css.map",
-    "main.9f0c3724.js.map": "/eonverse-hackies/static/js/main.9f0c3724.js.map",
-    "681.d2ea501a.chunk.css.map": "/eonverse-hackies/static/css/681.d2ea501a.chunk.css.map",
+    "main.1d2b323e.js.map": "/eonverse-hackies/static/js/main.1d2b323e.js.map",
+    "681.58457c85.chunk.css.map": "/eonverse-hackies/static/css/681.58457c85.chunk.css.map",
     "681.cb348a5a.chunk.js.map": "/eonverse-hackies/static/js/681.cb348a5a.chunk.js.map",
-    "840.d2ea501a.chunk.css.map": "/eonverse-hackies/static/css/840.d2ea501a.chunk.css.map",
+    "840.58457c85.chunk.css.map": "/eonverse-hackies/static/css/840.58457c85.chunk.css.map",
     "840.ced2a00c.chunk.js.map": "/eonverse-hackies/static/js/840.ced2a00c.chunk.js.map",
     "143.71469b39.chunk.js.map": "/eonverse-hackies/static/js/143.71469b39.chunk.js.map",
     "272.7bb8dcc6.chunk.css.map": "/eonverse-hackies/static/css/272.7bb8dcc6.chunk.css.map",
@@ -48,15 +48,15 @@
     "81.53d20a89.chunk.css.map": "/eonverse-hackies/static/css/81.53d20a89.chunk.css.map",
     "81.d9bf9370.chunk.js.map": "/eonverse-hackies/static/js/81.d9bf9370.chunk.js.map",
     "428.5a18e252.chunk.js.map": "/eonverse-hackies/static/js/428.5a18e252.chunk.js.map",
-    "105.559df91e.chunk.css.map": "/eonverse-hackies/static/css/105.559df91e.chunk.css.map",
-    "105.77418277.chunk.js.map": "/eonverse-hackies/static/js/105.77418277.chunk.js.map",
+    "969.75f97470.chunk.css.map": "/eonverse-hackies/static/css/969.75f97470.chunk.css.map",
+    "969.4f968aeb.chunk.js.map": "/eonverse-hackies/static/js/969.4f968aeb.chunk.js.map",
     "453.2ca9532b.chunk.js.map": "/eonverse-hackies/static/js/453.2ca9532b.chunk.js.map",
+    "563.b4487e35.chunk.js.map": "/eonverse-hackies/static/js/563.b4487e35.chunk.js.map",
     "411.4bafcbc3.chunk.js.map": "/eonverse-hackies/static/js/411.4bafcbc3.chunk.js.map",
-    "23.193477c8.chunk.js.map": "/eonverse-hackies/static/js/23.193477c8.chunk.js.map",
     "64.27babbfc.chunk.js.map": "/eonverse-hackies/static/js/64.27babbfc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.46889fd5.css",
-    "static/js/main.9f0c3724.js"
+    "static/js/main.1d2b323e.js"
   ]
 }
