@@ -36,30 +36,53 @@ const SignInForm = () => {
           () => resetFields()
         );
       } catch (error) {
-        swal("Error", error.response?.data?.message || "Something went wrong", "error");
+        swal(
+          "Error",
+          error.response?.data?.message || "Something went wrong",
+          "error"
+        );
       }
     } else if (isSignUp) {
       if (password !== confirmPassword) {
         swal("Error", "Passwords do not match!", "error");
       } else {
         try {
-          await axios.post("/register", { name, email, password, confirmPassword });
-          swal("Success", `Welcome, ${name}! Your account has been created.`, "success").then(
-            () => resetFields()
-          );
+          await axios.post("/register", {
+            name,
+            email,
+            password,
+            confirmPassword,
+          });
+          swal(
+            "Success",
+            `Welcome, ${name}! Your account has been created.`,
+            "success"
+          ).then(() => resetFields());
         } catch (error) {
-          swal("Error", error.response?.data?.message || "Something went wrong", "error");
+          swal(
+            "Error",
+            error.response?.data?.message || "Something went wrong",
+            "error"
+          );
         }
       }
     } else {
       try {
         const response = await axios.post("/login", { email, password });
-        swal("Success", `Signed in as ${response.data.user.name}`, "success").then(() => {
+        swal(
+          "Success",
+          `Signed in as ${response.data.user.name}`,
+          "success"
+        ).then(() => {
           resetFields();
           navigate("/demo"); // Redirecting to demo page
         });
       } catch (error) {
-        swal("Error", error.response?.data?.message || "Invalid credentials", "error");
+        swal(
+          "Error",
+          error.response?.data?.message || "Invalid credentials",
+          "error"
+        );
       }
     }
   };
@@ -190,7 +213,9 @@ const SignInForm = () => {
                   className="signin-input"
                 />
                 <i
-                  className={`fa ${showConfirmPassword ? "fa-eye-slash" : "fa-eye"}`}
+                  className={`fa ${
+                    showConfirmPassword ? "fa-eye-slash" : "fa-eye"
+                  }`}
                   onClick={toggleConfirmPasswordVisibility}
                   aria-hidden="true"
                 ></i>
