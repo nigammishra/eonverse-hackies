@@ -1,8 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./signin.css";
 import video from "../../images/signinbackvideo.mov";
-import { Link } from "react-router-dom";
-import swal from 'sweetalert';
+import { Link, useNavigate } from "react-router-dom";
+import swal from "sweetalert";
+import axios from "../../store/axios";
 
 const SignInForm = () => {
   const [email, setEmail] = useState("");
@@ -12,7 +13,10 @@ const SignInForm = () => {
   const [isForgotPassword, setIsForgotPassword] = useState(false);
   const [isSignUp, setIsSignUp] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const videoRef = useRef(null);
+  const navigate = useNavigate(); // Initialize the useNavigate hook
 
   useEffect(() => {
     if (videoRef.current) {
@@ -22,18 +26,41 @@ const SignInForm = () => {
     setTimeout(() => setLoading(false), 3000); // Simulate loading time
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (isForgotPassword) {
-      swal("Reset Password", `Reset link sent to: ${email}`, "success").then(() => resetFields());
+      try {
+        await axios.put("/update-password", { email });
+        swal("Reset Password", `Reset link sent to: ${email}`, "success").then(
+          () => resetFields()
+        );
+      } catch (error) {
+        swal("Error", error.response?.data?.message || "Something went wrong", "error");
+      }
     } else if (isSignUp) {
       if (password !== confirmPassword) {
         swal("Error", "Passwords do not match!", "error");
       } else {
-        swal("Success", `Welcome, ${name}! Your account has been created.`, "success").then(() => resetFields());
+        try {
+          await axios.post("/register", { name, email, password, confirmPassword });
+          swal("Success", `Welcome, ${name}! Your account has been created.`, "success").then(
+            () => resetFields()
+          );
+        } catch (error) {
+          swal("Error", error.response?.data?.message || "Something went wrong", "error");
+        }
       }
     } else {
-      swal("Success", `Signed in as ${email}`, "success").then(() => resetFields());
+      try {
+        const response = await axios.post("/login", { email, password });
+        swal("Success", `Signed in as ${response.data.user.name}`, "success").then(() => {
+          resetFields();
+          navigate("/demo"); // Redirecting to demo page
+        });
+      } catch (error) {
+        swal("Error", error.response?.data?.message || "Invalid credentials", "error");
+      }
     }
   };
 
@@ -59,6 +86,14 @@ const SignInForm = () => {
     setIsForgotPassword(false);
   };
 
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
+  const toggleConfirmPasswordVisibility = () => {
+    setShowConfirmPassword(!showConfirmPassword);
+  };
+
   return (
     <div className="signin-form-container">
       {loading ? (
@@ -67,12 +102,24 @@ const SignInForm = () => {
         </div>
       ) : (
         <>
-          <video ref={videoRef} className="background-video" autoPlay muted loop>
+          <video
+            ref={videoRef}
+            className="background-video"
+            autoPlay
+            muted
+            loop
+          >
             <source src={video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <form onSubmit={handleSubmit} className="signin-form">
-            <h2 className="signin-heading">{isForgotPassword ? "Reset Password" : isSignUp ? "Sign Up" : "Sign In"}</h2>
+            <h2 className="signin-heading">
+              {isForgotPassword
+                ? "Reset Password"
+                : isSignUp
+                ? "Sign Up"
+                : "Sign In"}
+            </h2>
 
             {isSignUp && (
               <div className="signin-input-box">
@@ -104,9 +151,12 @@ const SignInForm = () => {
 
             {(isSignUp || !isForgotPassword) && (
               <div className="signin-input-box">
-                <i className="signin-icon fa fa-unlock-alt" aria-hidden="true"></i>
+                <i
+                  className="signin-icon fa fa-unlock-alt"
+                  aria-hidden="true"
+                ></i>
                 <input
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   name="password"
                   placeholder="Password"
                   value={password}
@@ -116,14 +166,22 @@ const SignInForm = () => {
                   required
                   className="signin-input"
                 />
+                <i
+                  className={`fa ${showPassword ? "fa-eye-slash" : "fa-eye"}`}
+                  onClick={togglePasswordVisibility}
+                  aria-hidden="true"
+                ></i>
               </div>
             )}
 
             {isSignUp && (
               <div className="signin-input-box">
-                <i className="signin-icon fa fa-unlock-alt" aria-hidden="true"></i>
+                <i
+                  className="signin-icon fa fa-unlock-alt"
+                  aria-hidden="true"
+                ></i>
                 <input
-                  type="password"
+                  type={showConfirmPassword ? "text" : "password"}
                   name="confirmPassword"
                   placeholder="Confirm Password"
                   value={confirmPassword}
@@ -131,18 +189,31 @@ const SignInForm = () => {
                   required
                   className="signin-input"
                 />
+                <i
+                  className={`fa ${showConfirmPassword ? "fa-eye-slash" : "fa-eye"}`}
+                  onClick={toggleConfirmPasswordVisibility}
+                  aria-hidden="true"
+                ></i>
               </div>
             )}
 
             <div className="signin-input-box row justify-content-center">
               <div className="col-md-12 text-center">
                 <button type="submit" className="signin-submit-btn">
-                  {isForgotPassword ? "Reset Password" : isSignUp ? "Sign Up" : "Login"}
+                  {isForgotPassword
+                    ? "Reset Password"
+                    : isSignUp
+                    ? "Sign Up"
+                    : "Login"}
                 </button>
               </div>
               <div className="col-md-12 text-center mt-3">
                 {!isForgotPassword && !isSignUp && (
-                  <button type="button" onClick={handleSignUpClick} className="signin-submit-btn">
+                  <button
+                    type="button"
+                    onClick={handleSignUpClick}
+                    className="signin-submit-btn"
+                  >
                     Sign Up
                   </button>
                 )}

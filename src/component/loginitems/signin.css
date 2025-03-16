@@ -65,7 +65,7 @@
   .signin-icon {
     position: absolute;
     top: 8px;
-    left: 5px;
+    left: -23px;
     font-size: 18px;
     color: #fff;
   }
@@ -98,5 +98,32 @@
   
   .signin-forgot-link:hover {
     color: #ff4987;
+  }
+  
+
+  .signin-input-box {
+    position: relative;
+  }
+  
+  .signin-input {
+    width: 100%;
+    padding: 10px 15px;
+    padding-right: 40px; /* Add space for the eye icon */
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  .signin-input + i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #888;
+  }
+  
+  .signin-input + i:hover {
+    color: #333; /* Optional: change color on hover */
   }
   
