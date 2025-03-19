@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkeonverse_hackies=self.webpackChunkeonverse_hackies||[]).push([[143],{143:(e,s,c)=>{c.r(s),c.d(s,{default:()=>r});var a=c(43),i=c(579);const r=()=>{const[e,s]=(0,a.useState)(!0);return(0,a.useEffect)((()=>{setTimeout((()=>s(!1)),3e3)}),[]),(0,i.jsx)("div",{children:e?(0,i.jsx)("div",{className:"loader-container",children:(0,i.jsx)("div",{className:"sci-fi-loader"})}):(0,i.jsx)("div",{children:"About"})})}}}]);
-//# sourceMappingURL=143.71469b39.chunk.js.map
