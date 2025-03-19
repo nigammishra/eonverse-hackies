@@ -1,0 +1,125 @@
+.about-body {
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+  }
+  
+  .about-loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .about-sci-fi-loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid cyan;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .about-section {
+    text-align: center;
+    max-width: 1200px;
+    margin-top: 100px;
+  }
+  
+  .about-hero-text {
+    margin-bottom: 50px;
+  }
+  
+  .about-title {
+    font-size: 3rem;
+    color: cyan;
+    font-weight: bold;
+  }
+  
+  .about-subtitle {
+    font-size: 1.5rem;
+    color: lightgray;
+  }
+  
+  .about-details {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .about-card {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 255, 255, 0.3);
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+  }
+  
+  .about-card:hover {
+    transform: scale(1.1) rotateY(10deg);
+    box-shadow: 0px 10px 25px rgba(0, 255, 255, 0.5);
+  }
+  
+  .about-icon {
+    color: cyan;
+    font-size: 3rem;
+  }
+  
+  .about-card-title {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .about-card-text {
+    color: lightgray;
+    font-size: 1.1rem;
+  }
+  
+  .about-cta {
+    margin-top: 50px;
+  }
+  
+  .about-cta-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: cyan;
+  }
+  
+  .about-cta-text {
+    font-size: 1.3rem;
+    color: lightgray;
+  }
+  
+  .about-register-button {
+    display: inline-block;
+    background-color: cyan;
+    color: black;
+    font-weight: bold;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .about-register-button:hover {
+    background-color: #00b3b3;
+    transform: scale(1.1);
+  }
+  

@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Hero from './Hero';
+import Chat from './ChatBox.js';
 
 const MainPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    console.log('Effect running...');
     window.particlesJS("particle-container", {
       particles: {
         number: { value: 150, density: { enable: true, value_area: 1000 } },
@@ -21,20 +23,25 @@ const MainPage = () => {
       },
       retina_detect: true
     });
-
+  
     setTimeout(() => setLoading(false), 3000); // Simulate loading time
   }, []);
+  
 
   return (
     <div>
-      <div id="particle-container" className="particle-bg" />
+      <>
+      </>
+      <div id="particle-container" className="particle-bg" style={{background: 'linear-gradient(to bottom, #2c3e50, #3498db)', }} />
       {loading ? (
         <div className="loader-container">
           <div className="sci-fi-loader"></div>
         </div>
       ) : (
         <Hero />
+        
       )}
+      <Chat/>
     </div>
   );
 };
