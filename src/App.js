@@ -3,6 +3,7 @@ import Header from './headandfoot/Header.jsx';
 import React, { Suspense, lazy } from 'react';
 import './App.css';
 import Chat from './component/ChatBox.js';
+// import CapsuleScene from './component/CapsuleScene.js';
 
 const Main = lazy(() => import('./component/MainPage.jsx'));
 const Hero = lazy(() => import('./component/Hero.jsx'));
@@ -30,6 +31,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/signin" element={<Signin />} />
             <Route path="/chat" element={<Chat />} />
+            {/* <Route path="/capsule" element={<CapsuleScene />} /> */}
           </Routes>
         </Suspense>
       </div>

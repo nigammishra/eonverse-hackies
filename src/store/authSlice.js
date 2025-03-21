@@ -1,42 +1,43 @@
-
 // redux slice (authSlice.js)
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import API from './axios';
+import { fetchData } from './axios';
 
 const initialState = {
-  user: null,
+  user: JSON.parse(localStorage.getItem('userDetails')) || null,
   loading: false,
   error: null,
 };
 
+// Async thunk for login
 export const login = createAsyncThunk('auth/login', async (formData, { rejectWithValue }) => {
   try {
-    const response = await API.post('/login', formData);
-    localStorage.setItem('userDetails', JSON.stringify(response.data));
-    return response.data;
+    const data = await fetchData('POST', '/login', formData);
+    localStorage.setItem('userDetails', JSON.stringify(data));
+    return data;
   } catch (error) {
-    return rejectWithValue(error.response.data);
+    return rejectWithValue(error);
   }
 });
 
+// Async thunk for registration
 export const register = createAsyncThunk('auth/register', async (formData, { rejectWithValue }) => {
   try {
-    const response = await API.post('/register', formData);
-    return response.data;
+    return await fetchData('POST', '/register', formData);
   } catch (error) {
-    return rejectWithValue(error.response.data);
+    return rejectWithValue(error);
   }
 });
 
+// Async thunk for password update
 export const updatePassword = createAsyncThunk('auth/updatePassword', async (formData, { rejectWithValue }) => {
   try {
-    const response = await API.post('/update-password', formData);
-    return response.data;
+    return await fetchData('PUT', '/update-password', formData);
   } catch (error) {
-    return rejectWithValue(error.response.data);
+    return rejectWithValue(error);
   }
 });
 
+// Redux slice
 const authSlice = createSlice({
   name: 'auth',
   initialState,
@@ -73,5 +74,4 @@ const authSlice = createSlice({
 });
 
 export const { logout } = authSlice.actions;
-
 export default authSlice.reducer;
