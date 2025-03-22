@@ -11,7 +11,7 @@ const About = lazy(() => import('./component/About.jsx'));
 const Features = lazy(() => import('./component/Fetures/Features.jsx'));
 const TechStack = lazy(() => import('./component/TechStack.jsx'));
 const Demo = lazy(() => import('./component/Demo.jsx'));
-const Contact = lazy(() => import('./component/Contact.jsx'));
+const Contact = lazy(() => import('./component/contact/Contact.jsx'));
 const Signin = lazy(() => import('./component/loginitems/Signin.jsx'));
 // const Chat = lazy(() => import('./component/Chat.js'));
 

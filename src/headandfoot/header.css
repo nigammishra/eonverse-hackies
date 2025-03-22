@@ -2,6 +2,7 @@
   background-color: hsl(223deg 67% 59% / 26%); /* Dark background color */
   /* padding: 10px 0; Adjust padding as needed */
   z-index: 999;
+  position: sticky;
 }
 .logo-img {
   width: 200px;
@@ -9,6 +10,7 @@
 .signin-btn {
   margin-left: auto; /* Pushes the button to the far right */
 }
+
 
 .signin-btn a {
   padding: 10px 20px;
