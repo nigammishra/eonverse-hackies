@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./Hero.css";
 
 // Import images
@@ -7,12 +7,22 @@ import image2 from "../images/capimg2.avif";
 import image3 from "../images/capimg3.jpg";
 import image4 from "../images/capimg4.jpg";
 import image5 from "../images/capimg5.jpg";
-
 import image6 from "../images/capimg6.jpg";
 
 const images = [image1, image2, image3, image4, image5, image6];
 
 const Hero = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   useEffect(() => {
     const stack = document.querySelector(".stack");
     const cards = Array.from(stack.children)
@@ -55,7 +65,7 @@ const Hero = () => {
 
   return (
     <main>
-      <div className="content" style={{ marginTop: "130px" }}>
+      <div className="content" style={isMobile ? { marginTop: "30px" } : {}}>
         <h1>FrontEnd Ace...</h1>
         <p>
           "Created a hero section with a Bootstrap `col-6` layout, featuring a
@@ -66,7 +76,7 @@ const Hero = () => {
           <button className="btn">Explore More</button>
         </a>
       </div>
-      <div className="stack">
+      <div className="stack" style={isMobile ? { marginTop: "60px" } : {}}>
         {images.map((src, index) => (
           <div key={index} className="card">
             <img src={src} alt="herosectionimage" />

@@ -5,8 +5,11 @@ const API = axios.create({
   baseURL: 'https://anchovy-usable-solely.ngrok-free.app/enoverse/auth',
   headers: {
     'Content-Type': 'application/json',
+    'ngrok-skip-browser-warning': 'true',
+    'Access-Control-Allow-Origin': 'http://localhost:3000',
+    'Access-Control-Allow-Credentials': 'true'
   },
-  withCredentials: true, // Ensures cookies/session-based auth if required
+  // withCredentials: true,
 });
 
 // Add an interceptor to attach the Authorization token

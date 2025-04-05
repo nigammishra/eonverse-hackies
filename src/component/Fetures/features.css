@@ -1,146 +1,194 @@
-@property --cube-rotate-x {
-    syntax: "<angle>";
-    initial-value: 45deg;
-    inherits: true;
-  }
-  @property --cube-rotate-y {
-    syntax: "<angle>";
-    initial-value: 45deg;
-    inherits: true;
-  }
-  @property --cube-rotate-z {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: true;
-  }
-  @property --start-color {
-    syntax: "<color>";
-    initial-value: black;
-    inherits: true;
-  }
-  @property --end-color {
-    syntax: "<color>";
-    initial-value: white;
-    inherits: true;
-  }
-  
-  :root {
-    --start-color: black;
-    --end-color: white;
-    --color-offset: 12%;
-    --cube-rotate-x: 45deg;
-    --cube-rotate-y: 45deg;
-    --cube-rotate-z: 0deg;
-  }
-  
-  .cube-grid-wrapper {
-    --s-base: calc(100vmax / var(--c));
-    --s: calc(var(--s-base) - var(--s-base) * 0.25);
-    position: absolute;
-    width: 100vw;
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+.banner{
+    width: 100%;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #333;
-    animation: cube-grid-animation 20s linear infinite;
-  }
-  
-  .cube-grid-scene {
-    display: flex;
-    flex-direction: column;
-    perspective: 100rem;
-    gap: calc(var(--s) * 0.2);
-  }
-  
-  .cube-grid-container {
-    display: flex;
-    gap: calc(var(--s) * 0.42);
-  }
-  
-  .cube-grid-container:nth-child(even) {
-    transform: translateX(calc(var(--s) * 0.71));
-  }
-  
-  .cube-grid-cube {
-    width: var(--s);
-    aspect-ratio: 1;
-    transform-style: preserve-3d;
+    text-align: center;
+    overflow: hidden;
     position: relative;
-    background: linear-gradient(var(--cube-rotate-x), var(--start-color) var(--color-offset), var(--end-color));
-    animation: cube-grid-rotate 5s ease-in-out infinite;
-  }
-  
-  .cube-grid-top {
+}
+.banner .slider{
     position: absolute;
-    inset: 0;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: calc(50% - 100px);
     transform-style: preserve-3d;
-    display: grid;
-    place-items: center;
-  }
-  
-  .cube-grid-top::before,
-  .cube-grid-top::after {
-    content: "";
+    transform: perspective(1000px);
+    animation: autoRun 20s linear infinite;
+    z-index: 2;
+}
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .item{
     position: absolute;
-    inset: 0;
-    transform-style: preserve-3d;
-    background: linear-gradient(var(--cube-rotate-y), var(--start-color) var(--color-offset), var(--end-color));
-  }
-  
-  .cube-grid-top::after {
-    background: linear-gradient(var(--cube-rotate-z), var(--start-color) var(--color-offset), var(--end-color));
-  }
-  
-  /* @keyframes cube-grid-animation {
-    0%, 100% {
-      transform: rotateX(0deg) rotateY(0deg);
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(550px);
+}
+.banner .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner .content{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+.banner .content h1{
+    font-family: 'ICA Rubrik';
+    font-size: 14em;
+    line-height: 1em;
+    color: #fff;
+    position: relative;
+}
+.banner .content h1::after{
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+.banner .content .author{
+    font-family: Poppins;
+    text-align: right;
+    max-width: 200px;
+    color: #fff ;
+}
+.banner .content h2{
+    font-size: 3em;
+}
+.banner .content .model{
+    /* background-image: url(images/modeimg.jpg); */
+    width: 100%;
+    height: 75vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: auto 130%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 1;
+}
+@media screen and (max-width: 1023px) {
+    .banner .slider{
+        width: 160px;
+        height: 200px;
+        left: calc(50% - 80px);
     }
-    50% {
-      transform: rotateX(360deg) rotateY(360deg);
+    .banner .slider .item{
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(300px);
     }
-  } */
-  
-  @keyframes cube-grid-rotate {
-    0% {
-      transform: rotateX(var(--cube-rotate-x)) rotateY(var(--cube-rotate-y));
+    .banner .content h1{
+        text-align: center;
+        width: 100%;
+        text-shadow: 0 10px 20px #fff;
+        font-size: 7em;
     }
-    50% {
-      transform: rotateX(180deg) rotateY(180deg);
+    .banner .content .author{
+        color: #fff;
+        padding: 20px;
+        text-shadow: 0 10px 20px #fff;
+        z-index: 2;
+        max-width: unset;
+        width: 100%;
+        text-align: center;
+        padding: 0 30px;
     }
-    100% {
-      transform: rotateX(360deg) rotateY(360deg);
+}
+@media screen and (max-width: 767px) {
+    .banner .slider{
+        width: 100px;
+        height: 150px;
+        left: calc(50% - 50px);
     }
+    .banner .slider .item{
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(180px);
+    }
+    .banner .content h1{
+        font-size: 5em;
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
   
   body {
-    margin: 0;
-    overflow: hidden;
+    background-color: #000000;
+    background-image:
+      repeating-linear-gradient(to right, transparent 0 100px, #25283b22 100px 101px),
+      repeating-linear-gradient(to bottom, transparent 0 100px, #25283b22 100px 101px);
+    position: relative;
+    min-height: 100vh;
   }
   
-
-  .card-container {
-    margin-top: 100px;
+  .banner {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  .banner::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  /* Add your slider, content, author styling etc. here */
+  .slider {
     display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     justify-content: center;
-    align-items: center;
+    padding: 20px;
   }
   
-  .card-3d {
-    perspective: 1000px;
+   
+  
+  .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   
-  .custom-card {
-    transform-style: preserve-3d;
-    transition: transform 0.5s ease-in-out;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
+  .content {
+    text-align: center;
     color: white;
-  }
-  
-  .card-3d:hover .custom-card {
-    transform: rotateY(10deg) rotateX(10deg);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
   }
   
